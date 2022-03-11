@@ -46,7 +46,8 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
-  switch(idioma){
+
+  switch(idioma){//encendedor 
     case "aleman":
       return "Guten Tag!";
     case "mandarin":
@@ -102,7 +103,14 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  return Number.isInteger(numero);
+  
+  var numeroAux = Math.floor(numero);// 
+  if (numero == numeroAux){
+    return true;
+  }else{
+    return false;
+  }
+ // return Number.isInteger(numero);
 }
 
 function fizzBuzz(numero) {
@@ -177,13 +185,13 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  var table = [];
-  let actual = 0;
-  let i = 0;
+  var table = []; // array
+  let actual = 0; // bandera
+  let i = 0; // contador
   while (actual< 60){
-    actual = i * 6;
-    i++;
+    actual = i * 6;// multiplico
     table.push(actual);
+    i++;
   } 
   return table;
 }
